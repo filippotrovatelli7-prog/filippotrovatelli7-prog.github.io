@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>TROVAIDER | Installazioni · Manutenzioni · Lavori Tecnici</title>
+<meta name="description" content="Trovaider — Installazioni, manutenzioni, riparazioni e lavori tecnici. Professionalità, precisione e passione per il lavoro.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root {
+    --black: #070707;
+    --black-soft: #0d0d0d;
+    --graphite: #151515;
+    --gold: #d4af37;
+    --gold-light: #f0d878;
+    --gold-dark: #9d7820;
+    --white: #f4f1e8;
+    --muted: #aaa59a;
+    --border: rgba(212,175,55,.22);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* =========================
+   HEADER / HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 42%,
+            rgba(212,175,55,.12) 0%,
+            rgba(212,175,55,.045) 20%,
+            rgba(0,0,0,0) 55%
+        ),
+        linear-gradient(180deg, #090909 0%, #050505 100%);
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 28px;
+    border: 1px solid rgba(212,175,55,.10);
+    pointer-events: none;
+}
+
+.hero-content {
+    width: min(900px, 92%);
+    position: relative;
+    z-index: 2;
+    padding: 70px 20px;
+}
+
+/* Logo temporaneo:
+   qui inseriremo il Leone Trovaider 2026 */
+.logo-box {
+    width: min(250px, 60vw);
+    margin: 0 auto 30px;
+    position: relative;
+}
+
+.logo-box img {
+    width: 100%;
+    display: block;
+    filter: drop-shadow(0 12px 35px rgba(212,175,55,.16));
+}
+
+.logo-placeholder {
+    display: none;
+}
+
+.brand {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(42px, 8vw, 82px);
+    font-weight: 600;
+    letter-spacing: .16em;
+    color: var(--gold);
+    text-shadow:
+        0 2px 0 #6e5114,
+        0 0 30px rgba(212,175,55,.14);
+    margin-left: .16em;
+}
+
+.gold-line {
+    width: 210px;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--gold),
+        transparent
+    );
+    margin: 20px auto 25px;
+    position: relative;
+}
+
+.gold-line::after {
+    content: "◆";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -55%);
+    background: var(--black);
+    color: var(--gold);
+    padding: 0 10px;
+    font-size: 9px;
+}
+
+.tagline {
+    color: #d7d2c7;
+    font-size: 13px;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    margin-bottom: 38px;
+}
+
+.hero-description {
+    max-width: 680px;
+    margin: 0 auto 38px;
+    color: var(--muted);
+    font-size: 15px;
+}
+
+.primary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 30px;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    transition: .3s ease;
+    background: rgba(212,175,55,.025);
+}
+
+.primary-button:hover {
+    background: var(--gold);
+    color: #080808;
+    box-shadow: 0 10px 35px rgba(212,175,55,.16);
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+section {
+    padding: 105px 22px;
+    position: relative;
+}
+
+.section-inner {
+    width: min(1100px, 100%);
+    margin: auto;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.section-kicker {
+    color: var(--gold);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .28em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.section-title {
+    font-family: 'Cinzel', serif;
+    color: var(--white);
+    font-size: clamp(27px, 5vw, 42px);
+    letter-spacing: .08em;
+    font-weight: 600;
+}
+
+.section-rule {
+    width: 65px;
+    height: 2px;
+    background: var(--gold);
+    margin: 19px auto 0;
+}
+
+/* =========================
+   APPROACH
+========================= */
+
+.approach {
+    background:
+        linear-gradient(
+            135deg,
+            #0c0c0c 0%,
+            #111111 50%,
+            #090909 100%
+        );
+    border-top: 1px solid rgba(212,175,55,.10);
+    border-bottom: 1px solid rgba(212,175,55,.10);
+}
+
+.approach-text {
+    max-width: 820px;
+    margin: auto;
+    text-align: center;
+    color: #bcb7ac;
+    font-size: 16px;
+    line-height: 2;
+}
+
+.approach-text strong {
+    color: var(--gold-light);
+    font-weight: 600;
+}
+
+/* =========================
+   SERVICES
+========================= */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.service {
+    position: relative;
+    padding: 34px 28px;
+    min-height: 230px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.035),
+            rgba(255,255,255,.008)
+        );
+
+    border: 1px solid var(--border);
+    transition: .3s ease;
+}
+
+.service::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 38px;
+    height: 1px;
+    background: var(--gold);
+}
+
+.service:hover {
+    transform: translateY(-4px);
+    border-color: rgba(212,175,55,.55);
+    box-shadow: 0 15px 45px rgba(0,0,0,.35);
+}
+
+.service-number {
+    color: var(--gold);
+    font-family: 'Cinzel', serif;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.service h3 {
+    font-size: 16px;
+    letter-spacing: .08em;
+    margin-bottom: 13px;
+}
+
+.service p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* =========================
+   PHILOSOPHY
+========================= */
+
+.philosophy {
+    text-align: center;
+    background: #090909;
+}
+
+.quote {
+    max-width: 850px;
+    margin: auto;
+    font-family: 'Cinzel', serif;
+    font-size: clamp(24px, 4vw, 38px);
+    line-height: 1.5;
+    color: var(--white);
+}
+
+.quote span {
+    color: var(--gold);
+}
+
+.quote-small {
+    max-width: 650px;
+    margin: 25px auto 0;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* =========================
+   WORKS
+========================= */
+
+.works {
+    background: #0c0c0c;
+}
+
+.works-intro {
+    max-width: 700px;
+    margin: -20px auto 45px;
+    text-align: center;
+    color: var(--muted);
+}
+
+.works-placeholder {
+    min-height: 300px;
+    border: 1px dashed rgba(212,175,55,.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+    color: #77736b;
+}
+
+.works-placeholder strong {
+    display: block;
+    color: var(--gold);
+    margin-bottom: 8px;
+}
+
+/* =========================
+   VALUES
+========================= */
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+}
+
+.value {
+    text-align: center;
+    padding: 25px 12px;
+}
+
+.value-number {
+    color: var(--gold);
+    font-family: 'Cinzel', serif;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.value h3 {
+    font-size: 12px;
+    letter-spacing: .12em;
+    margin-bottom: 8px;
+}
+
+.value p {
+    color: #858179;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(212,175,55,.10),
+            transparent 55%
+        ),
+        #080808;
+
+    border-top: 1px solid rgba(212,175,55,.15);
+}
+
+.contact-text {
+    max-width: 650px;
+    margin: auto;
+    text-align: center;
+    color: var(--muted);
+}
+
+.contact-buttons {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    gap: 13px;
+    flex-wrap: wrap;
+}
+
+.contact-button {
+    min-width: 155px;
+    padding: 14px 22px;
+    border: 1px solid rgba(212,175,55,.55);
+    color: var(--gold);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+    transition: .25s ease;
+}
+
+.contact-button:hover {
+    background: var(--gold);
+    color: #070707;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 35px 20px;
+    text-align: center;
+    border-top: 1px solid rgba(212,175,55,.10);
+    background: #050505;
+}
+
+.footer-brand {
+    font-family: 'Cinzel', serif;
+    color: var(--gold);
+    letter-spacing: .18em;
+    font-size: 16px;
+    margin-left: .18em;
+}
+
+.footer-text {
+    color: #65615a;
+    font-size: 10px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    margin-top: 9px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    section {
+        padding: 80px 20px;
+    }
+
+    .hero::before {
+        inset: 15px;
+    }
+
+    .tagline {
+        letter-spacing: .12em;
+        line-height: 1.8;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .brand {
+        font-size: 38px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-button {
+        width: 100%;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     HERO
+========================= -->
+
+<header class="hero">
+
+    <div class="hero-content">
+
+        <div class="logo-box">
+
+            <!--
+            QUI INSERIREMO IL LEONE TROVAIDER 2026.
+            Nome file previsto:
+            logo-trovaider-2026.png
+            -->
+
+            <img
+                src="logo-trovaider-2026.png"
+                alt="Logo Trovaider"
+                onerror="this.style.display='none';"
+            >
+
+        </div>
+
+        <div class="brand">TROVAIDER</div>
+
+        <div class="gold-line"></div>
+
+        <div class="tagline">
+            Installazioni · Manutenzioni · Lavori Tecnici
+        </div>
+
+        <p class="hero-description">
+            Professionalità, precisione e passione per il lavoro.
+            Ogni intervento nasce dall'esigenza del cliente
+            e viene affrontato con attenzione, metodo e concretezza.
+        </p>
+
+        <a href="#contatti" class="primary-button">
+            Richiedi un intervento
+        </a>
+
+    </div>
+
+</header>
+
+
+<!-- =========================
+     APPROCCIO
+========================= -->
+
+<section class="approach">
+
+    <div class="section-inner">
+
+        <div class="section-heading">
+
+            <div class="section-kicker">
+                L'approccio Trovaider
+            </div>
+
+            <h2 class="section-title">
+                IL MIO MODO DI LAVORARE
+            </h2>
+
+            <div class="section-rule"></div>
+
+        </div>
+
+        <div class="approach-text">
+
+            <p>
+                Trovaider nasce dalla volontà di trasformare ogni intervento
+                in un lavoro eseguito con attenzione, competenza e responsabilità.
+            </p>
+
+            <br>
+
+            <p>
+                Che si tratti di un'installazione, di una manutenzione,
+                di una riparazione o di un intervento tecnico più specifico,
+                l'obiettivo è sempre lo stesso:
+                <strong>individuare la soluzione più adatta e realizzarla nel modo corretto.</strong>
+            </p>
+
+            <br>
+
+            <p>
+                Mi piace lavorare con precisione, mantenere ordine durante
+                l'intervento e dedicare attenzione anche ai dettagli che
+                spesso fanno la differenza nel risultato finale.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SERVIZI
+========================= -->
+
+<section>
+
+    <div class="section-inner">
+
+        <div class="section-heading">
+
+            <div class="section-kicker">
+                Cosa faccio
+            </div>
+
+            <h2 class="section-title">
+                SERVIZI
+            </h2>
+
+            <div class="section-rule"></div>
+
+        </div>
+
+        <div class="services-grid">
+
+            <article class="service">
+
+                <div class="service-number">01</div>
+
+                <h3>INSTALLAZIONI</h3>
+
+                <p>
+                    Realizzazione e montaggio di installazioni tecniche,
+                    valutando esigenze, spazi, materiali e modalità
+                    di intervento.
+                </p>
+
+            </article>
+
+
+            <article class="service">
+
+                <div class="service-number">02</div>
+
+                <h3>MANUTENZIONI</h3>
+
+                <p>
+                    Interventi di manutenzione ordinaria e straordinaria,
+                    individuando le problematiche e intervenendo dove
+                    necessario per ripristinare funzionalità ed efficienza.
+                </p>
+
+            </article>
+
+
+            <article class="service">
+
+                <div class="service-number">03</div>
+
+                <h3>RIPARAZIONI</h3>
+
+                <p>
+                    Quando qualcosa non funziona, il primo obiettivo
+                    è capire perché. La ricerca del problema viene
+                    prima dell'intervento.
+                </p>
+
+            </article>
+
+
+            <article class="service">
+
+                <div class="service-number">04</div>
+
+                <h3>LAVORI TECNICI</h3>
+
+                <p>
+                    Soluzioni pratiche e personalizzate per esigenze
+                    tecniche e lavorazioni diverse, valutando ogni
+                    situazione singolarmente.
+                </p>
+
+            </article>
+
+
+            <article class="service">
+
+                <div class="service-number">05</div>
+
+                <h3>INTERVENTI PERSONALIZZATI</h3>
+
+                <p>
+                    Situazioni diverse richiedono soluzioni diverse.
+                    Metodo, materiali e strumenti vengono adattati
+                    alle necessità reali del lavoro.
+                </p>
+
+            </article>
+
+
+            <article class="service">
+
+                <div class="service-number">06</div>
+
+                <h3>CURA DEL RISULTATO</h3>
+
+                <p>
+                    L'intervento non termina semplicemente quando
+                    il problema è risolto: ordine, attenzione e cura
+                    fanno parte del lavoro.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FILOSOFIA
+========================= -->
+
+<section class="philosophy">
+
+    <div class="section-inner">
+
+        <div class="section-heading">
+
+            <div class="section-kicker">
+                La filosofia
+            </div>
+
+            <h2 class="section-title">
+                IL PIACERE DI FARE BENE IL PROPRIO LAVORO
+            </h2>
+
+            <div class="section-rule"></div>
+
+        </div>
+
+        <div class="quote">
+
+            <span>Capire.</span>
+            <br>
+            Trovare la soluzione.
+            <br>
+            Realizzare il lavoro.
+            <br>
+            <span>Lasciarlo fatto bene.</span>
+
+        </div>
+
+        <p class="quote-small">
+
+            Per me un lavoro non è semplicemente qualcosa da portare a termine.
+            È qualcosa che deve essere fatto bene.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     LAVORI
+========================= -->
+
+<section class="works">
+
+    <div class="section-inner">
+
+        <div class="section-heading">
+
+            <div class="section-kicker">
+                Esperienza sul campo
+            </div>
+
+            <h2 class="section-title">
+                LAVORI REALIZZATI
+            </h2>
+
+            <div class="section-rule"></div>
+
+        </div>
+
+        <p class="works-intro">
+
+            Una raccolta degli interventi realizzati da Trovaider:
+            installazioni, manutenzioni, riparazioni e lavorazioni tecniche.
+
+            <br><br>
+
+            <strong>
+                Ogni lavoro racconta un'esigenza diversa e una soluzione concreta.
+            </strong>
+
+        </p>
+
+        <div class="works-placeholder">
+
+            <div>
+
+                <strong>PORTFOLIO TROVAIDER</strong>
+
+                <p>
+                    Qui inseriremo le fotografie dei lavori realizzati,
+                    organizzate in modo professionale.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     VALORI
+========================= -->
+
+<section>
+
+    <div class="section-inner">
+
+        <div class="section-heading">
+
+            <div class="section-kicker">
+                I valori Trovaider
+            </div>
+
+            <h2 class="section-title">
+                COME LAVORO
+            </h2>
+
+            <div class="section-rule"></div>
+
+        </div>
+
+
+        <div class="values-grid">
+
+            <div class="value">
+
+                <div class="value-number">01</div>
+
+                <h3>PRECISIONE</h3>
+
+                <p>
+                    Attenzione alla realizzazione
+                    e ai dettagli.
+                </p>
+
+            </div>
+
+
+            <div class="value">
+
+                <div class="value-number">02</div>
+
+                <h3>AFFIDABILITÀ</h3>
+
+                <p>
+                    Un rapporto diretto,
+                    chiaro e trasparente.
+                </p>
+
+            </div>
+
+
+            <div class="value">
+
+                <div class="value-number">03</div>
+
+                <h3>CONCRETEZZA</h3>
+
+                <p>
+                    Soluzioni pratiche
+                    pensate per il problema reale.
+                </p>
+
+            </div>
+
+
+            <div class="value">
+
+                <div class="value-number">04</div>
+
+                <h3>CURA</h3>
+
+                <p>
+                    Ordine, attenzione
+                    e rispetto durante il lavoro.
+                </p>
+
+            </div>
+
+
+            <div class="value">
+
+                <div class="value-number">05</div>
+
+                <h3>PASSIONE</h3>
+
+                <p>
+                    Il piacere di fare
+                    un lavoro fatto bene.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTATTI
+========================= -->
+
+<section class="contact" id="contatti">
+
+    <div class="section-inner">
+
+        <div class="section-heading">
+
+            <div class="section-kicker">
+                Parliamo del tuo lavoro
+            </div>
+
+            <h2 class="section-title">
+                HAI BISOGNO DI UN INTERVENTO?
+            </h2>
+
+            <div class="section-rule"></div>
+
+        </div>
+
+        <p class="contact-text">
+
+            Hai un problema da risolvere, un'installazione da realizzare
+            o un lavoro tecnico da valutare?
+
+            <br><br>
+
+            Contattami e descrivimi la situazione.
+            Valuteremo insieme l'intervento necessario
+            e la soluzione più adatta.
+
+        </p>
+
+
+        <div class="contact-buttons">
+
+            <!-- SOSTITUIRE CON IL NUMERO REALE -->
+
+            <a
+                class="contact-button"
+                href="tel:+390000000000">
+                Chiama
+            </a>
+
+
+            <!-- SOSTITUIRE CON IL NUMERO WHATSAPP REALE -->
+
+            <a
+                class="contact-button"
+                href="https://wa.me/390000000000">
+                WhatsApp
+            </a>
+
+
+            <!-- SOSTITUIRE CON EMAIL REALE -->
+
+            <a
+                class="contact-button"
+                href="mailto:info@trovaider.it">
+                Email
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="footer-brand">
+        TROVAIDER
+    </div>
+
+    <div class="footer-text">
+        Installazioni · Manutenzioni · Lavori Tecnici
+    </div>
+
+    <div class="footer-text">
+        © 2026 Trovaider · Tutti i diritti riservati
+    </div>
+
+</footer>
+
+</body>
+</html>
